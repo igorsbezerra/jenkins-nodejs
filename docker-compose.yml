@@ -7,6 +7,8 @@ services:
     ports:
       - 8080:8080
       - 50000:50000
+    environment:
+      - JAVA_OPTS="-Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true"
     volumes:
       - ./docker/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock

@@ -5,7 +5,7 @@ USER root
 RUN apt update
 RUN apt install wget
 
-RUN wget https://updates.jenkins.io/download/war/2.367/jenkins.war
+RUN wget https://updates.jenkins.io/download/war/2.368/jenkins.war
 RUN mv jenkins.war /usr/share/jenkins
 RUN chown jenkins:jenkins /usr/share/jenkins/jenkins.war
 
