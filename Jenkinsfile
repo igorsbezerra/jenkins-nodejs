@@ -8,7 +8,7 @@ pipeline {
   environment {
     CI = 'true'
   }
-  node (label: 'master') {
+  stages {
     stage('Build') {
       steps {
         sh 'npm install'
