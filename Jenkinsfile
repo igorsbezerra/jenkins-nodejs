@@ -8,12 +8,10 @@ pipeline {
   environment {
     CI = 'true'
   }
-  stages {
-    node (label: 'master') {
-      stage('Build') {
-        steps {
-          sh 'npm install'
-        }
+  node (label: 'master') {
+    stage('Build') {
+      steps {
+        sh 'npm install'
       }
     }
   }
